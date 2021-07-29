@@ -1,0 +1,66 @@
+[
+    {
+      "id": 1,
+      "name": "Nike Air Max",
+      "source": "./item/nike/nike.png",
+      "price":"50"
+    },
+    {
+      "id": 2,
+      "name": "Nike Jordan Travis Scott",
+      "source": "./item//nike/nike1.png",
+      "price": "600",
+      "style": "Chunky Sneaker",
+      "date" : "04/24/2021",
+      "color": "BROWN/BRIGHT BLUE"
+    }
+    ,
+    {
+      "id": 3,
+      "name": "Jordan 1",
+      "source": "./item//nike/nike2.png",
+      "price": "70"
+    },
+    {
+      "id": 4,
+      "name": "Jordan 1",
+      "source": "./item//nike/nike3.png",
+      "price": "70"
+    },
+    {
+      "id": 5,
+      "name": "Nike Air Max 97",
+      "source": "./item//nike/nike4.png",
+      "price": "80"
+    },
+    {
+      "id": 6,
+      "name": "Nike Air Max 97",
+      "source": "./item//nike/nike4.png",
+      "price": "80"
+    },
+    {
+      "id": 7,
+      "name": "Nike Air Max 97",
+      "source": "./item//nike/nike4.png",
+      "price": "80"
+    },
+    {
+      "id": 8,
+      "name": "Nike Air Max 97",
+      "source": "./item//nike/nike4.png",
+      "price": "80"
+    },
+    {
+      "id": 9,
+      "name": "Nike Air Max 97",
+      "source": "./item//nike/nike4.png",
+      "price": "80"
+    },
+    {
+      "id": 10,
+      "name": "Nike Air Max 97",
+      "source": "./item//nike/nike4.png",
+      "price": "80"
+    }
+  ]
