@@ -15,7 +15,8 @@ const Shoes = ({shoes, clickonimg}) =>{
         list:{
             display: "flex",
             flexWrap: "wrap",
-            justifyContent: "space-between"
+            justifyContent: "space-between",
+            alignItems: "flex-end"
         }
     }
     return(
