@@ -4,7 +4,7 @@ import {AiFillCloseCircle} from 'react-icons/ai'
 const Detail =({shoe})=>{
     const Style={
         display: {
-           paddingLeft: "150px",
+           paddingLeft: "50px",
 
         },
         h3:{
@@ -29,7 +29,7 @@ const Detail =({shoe})=>{
     const handleShow = () => setShow(true);
     return(
         <div style={Style.display}>
-            <img src={shoe.source} width={600}></img>
+            <img src={shoe.source} width="100%"></img>
             <div>
                 <h3 style={Style.h3}> RETAIL PRICE : {shoe.price} $ </h3>
                 <h3 style={Style.h3}> COLORWAY: {shoe.color}  </h3>

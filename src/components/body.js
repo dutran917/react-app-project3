@@ -4,17 +4,11 @@ import Content from './content';
 import { AiFillCaretLeft } from 'react-icons/ai';
 import DataNike from '../data/data.json';
 import DataDas from '../data/dataDas.json';
+import {useParams} from 'react-router-dom'
 
 const Body = () =>{
     const Style ={
-        Section:{
-            display: "flex",
-        },
-        Left:{
-            width: "25%",
-        },
         Right:{
-            width: "75%",
             display: "flex",
             position: "relative"
             
@@ -36,7 +30,7 @@ const Body = () =>{
           left: "50px"
         }
     }
-    const [brand,setBrand] = useState("Nike")
+    // const [brand,setBrand] = useState("")
     //setBrand là hàm thay đổi giá trị brand 
     //useState là đặt mặc định  brand ban đầu là Nike
  
@@ -48,9 +42,11 @@ const Body = () =>{
     const [shoesDas,setShoesDas]  = useState(DataDas) 
     const [shoe,setShoe] = useState(null)
     const [id,setId] = useState(-1)
- 
+
+    const {brand} = useParams()
+    console.log(brand)
     useEffect(() => {
-      switch(brand)
+        switch(brand)
         {
             case 'Nike':
                 setShoes(shoesNike)
@@ -69,8 +65,6 @@ const Body = () =>{
               setShoe(shoes[i])
             }
         }
-        // setShoe(shoes[0])
-        // console.log(shoes)
   },[id,brand])
 
   const [display,setDisplay] = useState(true)
@@ -81,34 +75,12 @@ const Body = () =>{
     setShoe(a)
     console.log(shoe)
 }
+    
     return(
-        <section className='body-page' style={Style.Section}>
-            <div className="left" style={Style.Left}>
-                <h3 style={Style.Brand}>Popular Brands</h3>
-                <ul className="brand">
-                    <li onClick={()=> {setBrand("Nike")
-                                      setDisplay(true)}} > Nike</li>
-                    <li onClick={()=> {setBrand("Adidas") 
-                                      setDisplay(true)}}> Adidas</li>
-                    <li onClick={()=> {setBrand("Vans") 
-                                      setDisplay(true)}} > Vans </li>
-                    <li onClick={()=> {setBrand("MLB") 
-                                      setDisplay(true)}} > MLB</li>
-                    <li onClick={()=> {setBrand("New Balance") 
-                                      setDisplay(true)}} > New Balance </li>
-                </ul>
-            </div>
-            {/* <div className="right" style = {Style.Right}>
-                
-                <Shoes shoes ={shoes} clickonimg = {clickonimg } ></Shoes>
-                <Detail shoe={shoe}></Detail>
-            </div> */}
            <div className="right" style={Style.Right}>
-
            { display==false && <AiFillCaretLeft style={Style.back} size="50px" title="back" onClick={()=> setDisplay(true)}></AiFillCaretLeft>}
             <Content display={display} shoes={shoes} shoe={shoe} clickonimg={clickonimg}></Content>
            </div>
-        </section>
     )
 }
 
