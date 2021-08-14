@@ -1,76 +1,211 @@
 [
-    {
-      "id": 1,
-      "name": "Nike Air Max",
-      "source": "../item/nike/nike.png",
-      "price":"50",
-      "access":0
-    },
-    {
-      "id": 2,
-      "name": "Nike Jordan Travis Scott",
-      "source": "../item//nike/nike1.png",
-      "price": "600",
-      "style": "Chunky Sneaker",
-      "date" : "04/24/2021",
-      "color": "BROWN/BRIGHT BLUE",
-      "access":0
-    }
-    ,
-    {
-      "id": 3,
-      "name": "Jordan 1",
-      "source": "../item//nike/nike2.png",
-      "price": "70",
-      "access":0
-    },
-    {
-      "id": 4,
-      "name": "Jordan 1",
-      "source": "../item//nike/nike3.png",
-      "price": "70",
-      "access":0
-    },
-    {
-      "id": 5,
-      "name": "Nike Air Max 97",
-      "source": "../item//nike/nike4.png",
-      "price": "80",
-      "access":0
-    },
-    {
-      "id": 6,
-      "name": "Nike Air Max 97",
-      "source": "../item//nike/nike4.png",
-      "price": "80",
-      "access":0
-    },
-    {
-      "id": 7,
-      "name": "Nike Air Max 97",
-      "source": "../item//nike/nike4.png",
-      "price": "80",
-      "access":0
-    },
-    {
-      "id": 8,
-      "name": "Nike Air Max 97",
-      "source": "../item//nike/nike4.png",
-      "price": "80",
-      "access":0
-    },
-    {
-      "id": 9,
-      "name": "Nike Air Max 97",
-      "source": "../item//nike/nike4.png",
-      "price": "80",
-      "access":0
-    },
-    {
-      "id": 10,
-      "name": "Nike Air Max 97",
-      "source": "../item//nike/nike4.png",
-      "price": "80",
-      "access":0
-    }
-  ]
+  {
+    "id": 1,
+    "name": "Nike SB Dunk Low Travis Scott (Regular Box)",
+    "source": "../item//nike/nike1.png",
+    "price": "600",
+    "style": "Chunky Sneaker",
+    "date" : "04/24/2021",
+    "color": "BROWN/BRIGHT BLUE",
+    "access":0,
+    "shoeline": "Air Jordan",
+    "brand": "Nike",
+    "detail": "Travis Scott ha collaborato con Nike SB per la release della sua prima ufficiale sneaker da skate - la Nike SB Dunk Low Travis Scott (Regular Box), ora disponibile su StockX. Questo design si attiene un'estetica simile alle Air Force 1 Low Travis Scott Cactus Jack, con una vasta gamma di materiali e stampe. A differenza delle precedenti release firmate Travis Scott, questo modello non era disponibile su SNKRS ma solo presso alcuni retailer di Nike SB."
+  },
+  {
+    "id": 2,
+    "name": "Nike Dunk Low Retro White Black (2021)",
+    "source": "../item//nike/nike2.png",
+    "price": "266",
+    "style": "DD1391-100",
+    "date" : "04/22/2020",
+    "color": "WHITE/BLACK",
+    "access":0,
+    "shoeline": "Baseketball",
+    "brand": "Nike",
+    "detail": "From the school-spirited College Colors Program to the vibrant Nike CO.JP collection, Nike Dunks have seen many colorways since the design’s inception in 1985. But with each new colorway, the Dunk’s classic color-blocking has remained in some capacity. Nike put its timeless color-blocking to work with the Nike Dunk Low Retro White Black. The upper Nike Dunk Low Retro White Black is constructed of white leather with black leather overlays and Swooshes. Classic Nike Air branding is featured on the nylon tongue, nodding to traditional Dunk design elements. A white midsole and black outsole completes the design.The Nike Dunk Low Retro White Black released in January of 2021 and retailed for $100."
+  },
+  {
+    "id": 3,
+    "name": "Nike Dunk Low SE Sail Multi-Camo(2021)",
+    "source": "../item//nike/nike3.png",
+    "price": "185",
+    "style": "DD1391-100",
+    "date" : "5/12/2020",
+    "color": "SAIL/VINTAGE GREEN-TOTAL O",
+    "access":0,
+    "shoeline": "Baseketball",
+    "brand": "Nike",
+    "detail": "Boasting clashing camouflage patterns, the Nike Dunk Low Sail Multi-Camo is a statement piece. The design utilizes a white leather base to prominently display its multi-color camo overlays, which feature five different styles of camo. Green Swooshes and vibrant orange Nike embroidery on the heel tabs add the finishing touches."
+  },
+  {
+    "id": 4,
+    "name": "Nike Dunk High SE First Use Sail (GS)",
+    "source": "../item//nike/nike4.png",
+    "price": "151",
+    "style": "DD1391-112",
+    "date" : "5/1/2020",
+    "color": "LIGHT BONE/GREEN NOISE",
+    "access":0,
+    "shoeline": "Baseketball",
+    "brand": "Nike",
+    "detail": "Boasting clashing camouflage patterns, the Nike Dunk Low Sail Multi-Camo is a statement piece. The design utilizes a white leather base to prominently display its multi-color camo overlays, which feature five different styles of camo. Green Swooshes and vibrant orange Nike embroidery on the heel tabs add the finishing touches."
+  },
+  {
+    "id": 5,
+    "name": "Jordan 1 Low fragment design x Travis Scott",
+    "source": "../item//nike/nike5.png",
+    "price": "1211",
+    "style": "DM7866-140",
+    "date" : "08/13/2021",
+    "color": "WHITE/BLACK-ROYAL- SAIL",
+    "access":0,
+    "shoeline": "Air Jordan",
+    "brand": "Nike",
+    "detail": "The Air Jordan 1 Low Fragment Design x Travis Scott nods to the original 2016 Air Jordan 1 Fragment with its simple color blocking. It features a smooth white leather upper with black and royal blue leather overlays. From there, a signature reversed Swoosh and yellowed soles add a Cactus Jack flair to the classic silhouette.    "
+  },
+  {
+    "id": 6,
+    "name": "Jordan 1 High OG SP fragment design x Travis Scott",
+    "source": "../item//nike/nike6.png",
+    "price": "2155",
+    "style": "DH3227-105",
+    "date" : "08/13/2021",
+    "color": "SAIL/BLACK-MILITARY BLUE",
+    "access":0,
+    "shoeline": "Air Jordan",
+    "brand": "Nike",
+    "detail": "The Air Jordan 1 High OG SP Fragment Design x Travis Scott fragment draws inspiration from a Jordan 1 Royal press sample from 1985 with its white and blue tumbled leather upper. Similar to previous Travis Scott Jordan 1s, signature reverse Swooshes and hidden stash pockets in the collar add on to the classic design. From there, both Travis Scott's Cactus Jack and Fragment logos are debossed in black on the heel wrap. "
+  },
+  {
+    "id": 7,
+    "name": "Jordan 1 Retro High White University Blue Black",
+    "source": "../item//nike/nike7.png",
+    "price": "341",
+    "style": "555088-134",
+    "date" : "08/13/2021",
+    "color": "WHITE/UNIVERSITY BLUE",
+    "access":0,
+    "shoeline": "Air Jordan",
+    "brand": "Nike",
+    "detail": "Jordan Brand paid homage to MJ’s alma mater with the Air Jordan 1 High University Blue. The University Blue colorway is prominent in the Jordan 1’s history. The first UNC-inspired Jordan 1 dates back to 1985 when the Jordan 1 debuted. Since then, there have been numerous iterations of the UNC 1, most recently the Jordan 1 Retro High Fearless UNC To Chicago. Jumpman is building off of its past and switching it up this week with a new iteration.    "
+  },
+  {
+    "id": 8,
+    "name": "Jordan 1 Retro High University Blue (TD)",
+    "source": "../item//nike/nike8.png",
+    "price": "221",
+    "style": "555088-134",
+    "date" : "08/13/2021",
+    "color": "UNIVERSITY BLUE/WHITE-BLACK-UNIVERSITY BLUE",
+    "access":0,
+    "shoeline": "Air Jordan",
+    "brand": "Nike",
+    "detail": "Jordan Brand paid homage to MJ’s alma mater with the Air Jordan 1 High University Blue. The University Blue colorway is prominent in the Jordan 1’s history. The first UNC-inspired Jordan 1 dates back to 1985 when the Jordan 1 debuted. Since then, there have been numerous iterations of the UNC 1, most recently the Jordan 1 Retro High Fearless UNC To Chicago. Jumpman is building off of its past and switching it up this week with a new iteration.    "
+  },
+  {
+    "id": 9,
+    "name": "Jordan 1 Retro High Off-White University Blue",
+    "source": "../item//nike/nike9.png",
+    "price": "1805",
+    "style": "21112-134",
+    "date" : "2/13/2021",
+    "color": "WHITE/DARK POWDER BLUE",
+    "access":0,
+    "shoeline": "Air Jordan",
+    "brand": "Nike",
+    "detail": "Time for some Tobacco Road vibes with these Jordan 1 Retro Off-Whites. Also known as the “UNC” editions, these Jordan 1s are the third colorway designed by Virgil Abloh and made in collaboration with his Off-White label. The sneakers come in a white, dark powder blue and cone colorway, with a white and blue deconstructed leather upper and Off-White detailing throughout. If you’re a fan of Virgil Abloh’s work and want to rep Off-White, this pair is another must-have."
+  },
+  {
+    "id": 10,
+    "name": "Nike classic LeBron 8 South Beach (2021)",
+    "source": "../item//nike/nike10.png",
+    "price": "244",
+    "style": "21112-134",
+    "date" : "2/13/2019",
+    "color": "RETRO/PINK FLASH-FILAME",
+    "access":0,
+    "shoeline": "LeBron",
+    "brand": "Nike",
+    "detail": "In 2021, Nike brought back the classic 2010 Nike LeBron 8 South Beach. The upper consists of a mix of Filament Green leather and carbon fiber. From there, hits of Pink Flash appear on the laces and inner lining. Lastly, a lion head is embossed on the tongue to symbolize LeBron’s status as king of the court."
+  },
+  {
+    "id": 11,
+    "name": "Nike LeBron 8 South Beach (Pre-Heat)",
+    "source": "../item//nike/nike11.png",
+    "price": "244",
+    "style": "21112-134",
+    "date" : "10/16/2010",
+    "color": "RETRO/PINK FLASH-FILAME",
+    "access":0,
+    "shoeline": "LeBron",
+    "brand": "Nike",
+    "detail": "In 2021, Nike brought back the classic 2010 Nike LeBron 8 South Beach. The upper consists of a mix of Filament Green leather and carbon fiber. From there, hits of Pink Flash appear on the laces and inner lining. Lastly, a lion head is embossed on the tongue to symbolize LeBron’s status as king of the court."
+  },
+  {
+    "id": 12,
+    "name": "Nike classic LeBron 17 South Beach (GS)",
+    "source": "../item//nike/nike12.png",
+    "price": "244",
+    "style": "21112-134",
+    "date" : "10/16/2010",
+    "color": " LIGHT AQUA/PARTICLE GREY",
+    "access":0,
+    "shoeline": "LeBron",
+    "brand": "Nike",
+    "detail": "In 2021, Nike brought back the classic 2010 Nike LeBron 8 South Beach. The upper consists of a mix of Filament Green leather and carbon fiber. From there, hits of Pink Flash appear on the laces and inner lining. Lastly, a lion head is embossed on the tongue to symbolize LeBron’s status as king of the court."
+  },
+  {
+    "id": 13,
+    "name": "Nike Air Force 1 Low White '07",
+    "source": "../item//nike/nike13.png",
+    "price": "90",
+    "style": "21112-134",
+    "date" : "11/24/2007",
+    "color": " WHITE/WHITE",
+    "access":0,
+    "shoeline": "Air Force",
+    "brand": "Nike",
+    "detail": "The Nike Air Force 1 Low White ‘07 features an all-white leather upper with a perforated toe box and Swoosh overlays. A Nike heel embroidery and white sole completes the design.  The Nike Air Force 1 Low White ‘07 originally released in 2007, but since it is an essential colorway to the brand, it consistently restocks."
+  },
+  {
+    "id": 14,
+    "name": "Nike Air Force 1 Mid White '07",
+    "source": "../item//nike/nike14.png",
+    "price": "110",
+    "style": "21112-134",
+    "date" : "11/24/2016",
+    "color": "WHITE/WHITE",
+    "access":0,
+    "shoeline": "Air Force",
+    "brand": "Nike",
+    "detail": "The Nike Air Force 1 Low White ‘07 features an all-white leather upper with a perforated toe box and Swoosh overlays. A Nike heel embroidery and white sole completes the design.  The Nike Air Force 1 Low White ‘07 originally released in 2007, but since it is an essential colorway to the brand, it consistently restocks."
+  },
+  {
+    "id": 15,
+    "name": "Nike Air Force 1 Mid Tisci White",
+    "source": "../item//nike/nike15.png",
+    "price": "110",
+    "style": "1M324-134",
+    "date" : "03/21/2014",
+    "color": "WHITE/BAROQUE BROWN",
+    "access":0,
+    "shoeline": "Air Force",
+    "brand": "Nike",
+    "detail": "The Nike Air Force 1 Low White ‘07 features an all-white leather upper with a perforated toe box and Swoosh overlays. A Nike heel embroidery and white sole completes the design.  The Nike Air Force 1 Low White ‘07 originally released in 2007, but since it is an essential colorway to the brand, it consistently restocks."
+  },
+  {
+    "id": 16,
+    "name": "Nike Air Force 1 Low Tisci White",
+    "source": "../item//nike/nike16.png",
+    "price": "422",
+    "style": "1M324-134",
+    "date" : "03/21/2018",
+    "color": "WHITE/BAROQUE BROWN",
+    "access":0,
+    "shoeline": "Air Force",
+    "brand": "Nike",
+    "detail": "The Nike Air Force 1 Low White ‘07 features an all-white leather upper with a perforated toe box and Swoosh overlays. A Nike heel embroidery and white sole completes the design.  The Nike Air Force 1 Low White ‘07 originally released in 2007, but since it is an essential colorway to the brand, it consistently restocks."
+  }
+  
+]

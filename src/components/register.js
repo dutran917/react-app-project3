@@ -10,7 +10,7 @@ const Register = ()=>{
                     <input type="password" placeholder="password"/>
                     <input type="text" placeholder="email address"/>
                     <button>create</button>
-                    <p class="message">Already registered? <Link to='/login'>Sign In</Link></p>
+                    <p class="message">Already registered? <Link to='/account/login'>Sign In</Link></p>
                 </form>
             </div>
         </div>

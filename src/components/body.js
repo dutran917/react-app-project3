@@ -1,14 +1,31 @@
 import '../custom.scss'
 import { useState,useEffect } from 'react';
-import Content from './content';
+import Shoes from './Shoes'
 import { AiFillCaretLeft } from 'react-icons/ai';
 import DataNike from '../data/data.json';
 import DataDas from '../data/dataDas.json';
-import {useParams} from 'react-router-dom'
-
+import DataVans from '../data/dataVans.json'
+import DataMLB from '../data/dataMlb.json'
+import DataNB from '../data/dataNB.json'
+import lineNike from '../data/shoelineNike.json'
+import lineDas from '../data/shoelineDas.json'
+import lineVans from '../data/shoelineVans.json'
+import lineMLB from '../data/shoelineMlb.json'
+import lineNB from '../data/shoelineNB.json'
+import {useParams,useHistory} from 'react-router-dom'
+import {Form} from 'react-bootstrap'
 const Body = () =>{
     const Style ={
+        Section:{
+            display: "flex"
+        },
+        Left:{
+            paddingTop: "2%",
+            paddingLeft: "5%",
+            width: "20%"
+        },
         Right:{
+            width: "80%",
             display: "flex",
             position: "relative"
             
@@ -36,51 +53,120 @@ const Body = () =>{
  
 
     const [shoes,setShoes]  = useState([]) 
-      
-    const [shoesNike,setShoesNike]  = useState(DataNike) 
-
-    const [shoesDas,setShoesDas]  = useState(DataDas) 
-    const [shoe,setShoe] = useState(null)
+    let shoesNike = DataNike
+    let shoesDas = DataDas
+    let shoesVans = DataVans
+    let shoesMLB = DataMLB
+    let shoesNB = DataNB
+    const [lineofshoe,setLoS] = useState(lineNike)
+    // const [shoe,setShoe] = useState(null)
     const [id,setId] = useState(-1)
-
+    const {shoe} = useParams()
     const {brand} = useParams()
-    console.log(brand)
-    useEffect(() => {
+    const [line, setline] = useState(null)
+    function changeBrand(brand){
         switch(brand)
         {
             case 'Nike':
+            {   
                 setShoes(shoesNike)
-                // console.log(shoes)
+                setLoS(lineNike)
                 break
+            }
             case 'Adidas':
+            {   
                 setShoes(shoesDas)
+                setLoS(lineDas)
                 break
+            }
+            case 'Vans':
+            {
+                setShoes(shoesVans)
+                setLoS(lineVans)
+                break
+            }
+            case 'MLB':
+            {
+                setShoes(shoesMLB)
+                setLoS(lineMLB)
+                break
+            }
+            case 'New-Balance':
+            {
+                setShoes(shoesNB)
+                setLoS(lineNB)
+                break
+            }
             default:
               break
         }
-        for(let i=0;i<shoes.length;i++)
-        {
-            if(id == shoes[i].id)
-            {
-              setShoe(shoes[i])
-            }
-        }
-  },[id,brand])
 
-  const [display,setDisplay] = useState(true)
+    }
+
   
-  const clickonimg = (a)=> {
-    setDisplay(false)
-    setId(a.id)
-    setShoe(a)
-    console.log(shoe)
-}
+    useEffect(() => {
+        changeBrand(brand)
+        if(line != null)
+        {
+            let clone 
+            if(brand=='Nike')
+                clone = shoesNike
+            else if(brand =='Adidas')
+                clone = shoesDas
+            else if(brand =='Vans')
+                clone = shoesVans
+            console.log(brand)
+            let fil = clone.filter(shoe => shoe.shoeline === line)
+            console.log(fil)          
+            setShoes(fil)
+        }
+    },[brand,line])
+
+    const [display,setDisplay] = useState(true)
+  
+    // const clickonimg = (a)=> {
+    // setDisplay(false)
+    // setId(a.id)
+    // setShoe(a)
+    // console.log(shoe)
+    // }
+
+    // useEffect(() => {
+   
+    // }, [line])
     
+ 
+
+    const history = useHistory()
+
+    // const goBack = () => {
+      
+    // }
     return(
-           <div className="right" style={Style.Right}>
-           { display==false && <AiFillCaretLeft style={Style.back} size="50px" title="back" onClick={()=> setDisplay(true)}></AiFillCaretLeft>}
-            <Content display={display} shoes={shoes} shoe={shoe} clickonimg={clickonimg}></Content>
-           </div>
+        <section style={Style.Section}>
+            {
+                display && <div className="left" style={Style.Left}>
+                <Form onChange = {(e)=>setline(e.target.value)}> 
+                    <h3>{brand}</h3>    
+                    {lineofshoe.map((line)=>(
+                       <Form.Check type="radio" name='shoeline' label={line} value={line} />
+                    ))}
+                </Form>
+                <Form> 
+                    <h3>Price </h3>
+                    <Form.Check type="radio" name="price" label="$50-100"></Form.Check>
+                    <Form.Check type="radio" name="price" label="$100-200"></Form.Check>   
+                    <Form.Check type="radio" name="price" label="$200-400"></Form.Check>
+                    <Form.Check type="radio" name="price" label="$400-800"></Form.Check>
+                    <Form.Check type="radio" name="price" label="$800-1200"></Form.Check>
+                    <Form.Check type="radio" name="price" label="$>1200"></Form.Check>    
+                </Form>
+            </div>
+            }
+            <div className="right" style={Style.Right}>
+                <Shoes shoes ={shoes}  ></Shoes>
+            </div>
+        </section>     
     )
 }
 

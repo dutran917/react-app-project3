@@ -10,7 +10,7 @@ const Login = ()=>{
                 <input type="text" placeholder="username"/>
                 <input type="password" placeholder="password"/>
                 <button>login</button>
-                <p class="message">Not registered? <Link to='/register'>Create an account</Link></p>
+                <p class="message">Not registered? <Link to='/account/register'>Create an account</Link></p>
             </form>
         </div>
     </div>

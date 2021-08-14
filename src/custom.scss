@@ -7,81 +7,155 @@ $success: #EF3B3A;
     margin-left: 20px;
     margin-right: 20px;
   }
-  .choose{
-    margin-left: 200px;
-  }
-  .mr-2{
-      width: 400px;
-      margin-right: 10px;
-  }
- 
-  div.item{
-    width: 30%;
-    // padding: 3px;
-    // border: double;
-  }
-  
-  div.item figure > img{
-    width: 100%;
-    cursor: pointer;
-    // height: 200px;
-    transition: transform ease 0.5s;
-  }
-  div.item figure > img:hover{
-    transform:skewX(30px)
-  }
-  figcaption{
-    text-align: center;
-
-  }
-
-  /* -----------choose brand---------------- */
-  // .box {
-  //   width: 250px;
-  //   height: 250px;
-  //   border-radius: 100px;
-  //   background-color:#333;
-  //   box-shadow: 0 5px 40px rgba(0, 0, 0, 0.2);
-  // }
-  
-  .card-content{
-    transform: translateY(10px);
-    transition: 0.5s;
-
-  }
-  // .card-content > img {
-  //   width: 100%;
-  //   height: 100%;
-   
-
-  // }
-  .dasimg{
-
-    width: 150px;
-    height: 150px;
-    transition: ease 0.5s;
-    transform: translateY(10px);
-  }
-  .card {
-    width: 200px;
-    padding-left: 20px;
-    padding-top: 20px;
-    // margin-right: 400px;
-
-    margin-bottom: 100px;
-    height: 200px;
-    box-shadow: 10px 10px 10px rgba(0,0,0,0.5);
-    // border-radius: 200px;
-    // background-color: rgba(200, 200, 200, 0.5);
-    /* background-image: url("das1.png");    */
-    // border-top: 1px solid rgba(255, 255, 255, 0.5);
-    // border-left: 1px solid rgba(255, 255, 255, 0.5); 
-    cursor: pointer;
+.choose{
+  margin-left: 200px;
 }
-.card :hover{
+.mr-2{
+    width: 400px;
+    margin-right: 10px;
+}
+
+div.item{
+  width: 25%;
+  // padding: 3px;
+  // border: double;
+}
+
+div.item figure > img{
+  width: 90%;
+  cursor: pointer;
+  // height: 200px;
+  transition: transform ease 0.3s;
+
+}
+
+figcaption{
+  // text-align: center;
+
+}
+.price{
+  padding-left: 5%;
+}
+.item .linkto {
+  text-decoration: none;
+  color: black;
+}
+/* -----------choose brand---------------- */
+// .box {
+//   width: 250px;
+//   height: 250px;
+//   border-radius: 100px;
+//   background-color:#333;
+//   box-shadow: 0 5px 40px rgba(0, 0, 0, 0.2);
+// }
+
+.card-content{
+  transform: translateY(10px);
+  // transition: 0.5s;
+
+}
+// .card-content > img {
+//   width: 100%;
+//   height: 100%;
+
+
+// }
+.dasimg{
+
+  width: 150px;
+  height: 150px;
+  transition: ease 0.5s;
+  transform: translateY(10px);
+}
+// .card {
+//   width: 200px;
+//   padding-left: 20px;
+//   padding-top: 20px;
+//   margin-bottom: 100px;
+//   height: 200px;
+//   box-shadow: 10px 10px 10px rgba(0,0,0,0.5);
+//   cursor: pointer;
+// }
+.card-adidas :hover{
     transform: translateY(0px);
     opacity: 1;
 }
+
+.card-nike :hover{
+  transform: translateY(0px);
+  opacity: 1;
+}
+
+.card-mlb :hover{
+  transform: translateY(0px);
+  opacity: 1;
+}
+
+.card-vans :hover{
+  transform: translateY(0px);
+  opacity: 1;
+}
+
+.card-nb :hover{
+  transform: translateY(0px);
+  opacity: 1;
+}
+
+.card-adidas {
+  width: 200px;
+  padding-left: 20px;
+  padding-top: 20px;
+  margin-bottom: 100px;
+  background-image: url("adidasbg.png");
+  height: 200px;
+  box-shadow: 10px 10px 10px rgba(0,0,0,0.5);
+  cursor: pointer;
+}
+
+.card-nike {
+  width: 200px;
+  padding-left: 20px;
+  padding-top: 20px;
+  margin-bottom: 100px;
+  background-image: url("nikebg.png");
+  height: 200px;
+  box-shadow: 10px 10px 10px rgba(0,0,0,0.5);
+  cursor: pointer;
+}
+
+.card-mlb {
+  width: 200px;
+  padding-left: 20px;
+  padding-top: 20px;
+  margin-bottom: 100px;
+  background-image: url("mlbbg.png");
+  height: 200px;
+  box-shadow: 10px 10px 10px rgba(0,0,0,0.5);
+  cursor: pointer;
+}
+
+.card-vans {
+  width: 200px;
+  padding-left: 20px;
+  padding-top: 20px;
+  margin-bottom: 100px;
+  background-image: url("vansbg.png");
+  height: 200px;
+  box-shadow: 10px 10px 10px rgba(0,0,0,0.5);
+  cursor: pointer;
+}
+
+.card-nb {
+  width: 200px;
+  padding-left: 20px;
+  padding-top: 20px;
+  margin-bottom: 100px;
+  background-image: url("nbbg.png");
+  height: 200px;
+  box-shadow: 10px 10px 10px rgba(0,0,0,0.5);
+  cursor: pointer;
+}
+
 .brand{
     // background-color: cornsilk;
     display:flex;
@@ -90,9 +164,23 @@ $success: #EF3B3A;
     margin-top: 20px;
     overflow: auto;
     justify-content:space-between;
-    margin-bottom: 200px;
+    // margin-bottom: 200px;
 }
+
 .brands{
   // background-color: cornsilk;
 }
- 
+
+/* -----------product---------------- */
+.order{
+  display: flex;
+  justify-content: center;
+  border-top: 1px solid black;
+  margin-bottom: 5%;
+}
+.order-tag{
+  text-align: center;
+  width: 10%;
+  background-color: rgba(0,0,0,0.8);
+  color: white;
+}

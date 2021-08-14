@@ -3,8 +3,7 @@ import Shoes from "./Shoes"
 const Content =({display,shoes,shoe,clickonimg,style})=> {
      return(
         <div style={style}>
-            { display && <Shoes shoes ={shoes} clickonimg = {clickonimg } ></Shoes> }
-            {display==false && <Detail shoe={shoe}></Detail>}
+            <Shoes shoes ={shoes}  ></Shoes>
         </div>
 
         )

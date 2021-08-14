@@ -1,0 +1,64 @@
+[
+    {
+        "id": 1,
+        "name": "Nike SB Dunk Low Travis Scott (Regular Box)",
+        "source": "../item//nike/nike1.png",
+        "price": "600",
+        "style": "Chunky Sneaker",
+        "date" : "04/24/2021",
+        "color": "BROWN/BRIGHT BLUE",
+        "access":0,
+        "shoeline": "Air Jordan",
+        "brand": "Nike",
+        "detail": "Travis Scott ha collaborato con Nike SB per la release della sua prima ufficiale sneaker da skate - la Nike SB Dunk Low Travis Scott (Regular Box), ora disponibile su StockX. Questo design si attiene un'estetica simile alle Air Force 1 Low Travis Scott Cactus Jack, con una vasta gamma di materiali e stampe. A differenza delle precedenti release firmate Travis Scott, questo modello non era disponibile su SNKRS ma solo presso alcuni retailer di Nike SB."
+    },
+    {
+        "id": 2,
+        "name": "adidas Yeezy Boost 700 Wave Runner Solid Grey",
+        "source": "../item/adidas/das5.png",
+        "price": "343",
+        "style": "G52250",
+        "date" : "12/22/2020",
+        "color": "SOLID GREY/CHALK WHITE",
+        "shoeline": "Yeezy",
+        "brand": "Adidas",
+        "detail":"A new set of waves are rolling in as the adidas Yeezy Wave Runner 700s get ready for their first restock on March 10th, 2018. First releasing in November of 2017, the Yeezy Boost 700’s represented what was a significant shift in Kanye’s design aesthetic, moving from the minimalistic silhouettes of early Yeezy seasons to this chunky runner model. It once again showed how Kanye stays ahead of the curve, as chunkier sneakers became more en vogue in 2018. The shoe features an upper with grey and black suede overlays, premium leather with blue mesh underlays, neon green laces, and its signature chunky midsole with encapsulated Boost technology. Translation: these may look bold but are still comfy as hell. The Yeezy Wave Runners will stay at the same retail cost of $300 for the upcoming restock, but have averaged a sale price well above retail on StockX since their initial drop. So if you’re looking to add these to your Yeezy collection, remember that fortune favors the bold bidders."
+    },
+    {
+        "id": 3,
+        "name": "adidas Yeezy Boost 700 MNVN Orange",
+        "source": "../item/adidas/das4.png",
+        "price": "221",
+        "style": "G54850",
+        "date" : "02/28/2020",
+        "color": "ORANGE/ORANGE",
+        "shoeline": "Yeezy",
+        "brand": "Adidas",
+        "detail":"Yeezy introduced a new colorway to their 700 MNVN series with the adidas Yeezy Boost 700 MNVN Orange, now available on StockX. Although the silhouette is similar to previous models, this shoe differs by displaying “700” branding on the upper using compact materials.    This Yeezy Boost 700 MNVN is comprised of an orange nylon upper paired with reflective detailing. A solid black sole with Boost cushioning completes the design. These sneakers released in February of 2020 and retailed for $220."
+    },
+    {
+        "id": 4,
+        "name": "adidas Yeezy Boost 700 Wave Runner Solid Grey",
+        "source": "../item/adidas/das5.png",
+        "price": "343",
+        "style": "G52250",
+        "date" : "12/22/2020",
+        "color": "SOLID GREY/CHALK WHITE",
+        "shoeline": "Yeezy",
+        "brand": "Adidas",
+        "detail":"A new set of waves are rolling in as the adidas Yeezy Wave Runner 700s get ready for their first restock on March 10th, 2018. First releasing in November of 2017, the Yeezy Boost 700’s represented what was a significant shift in Kanye’s design aesthetic, moving from the minimalistic silhouettes of early Yeezy seasons to this chunky runner model. It once again showed how Kanye stays ahead of the curve, as chunkier sneakers became more en vogue in 2018. The shoe features an upper with grey and black suede overlays, premium leather with blue mesh underlays, neon green laces, and its signature chunky midsole with encapsulated Boost technology. Translation: these may look bold but are still comfy as hell. The Yeezy Wave Runners will stay at the same retail cost of $300 for the upcoming restock, but have averaged a sale price well above retail on StockX since their initial drop. So if you’re looking to add these to your Yeezy collection, remember that fortune favors the bold bidders."
+    },
+    {
+        "id": 5,
+        "name": "Nike Dunk Low Retro White Black (2021)",
+        "source": "../item//nike/nike5.png",
+        "price": "110",
+        "style": "DD1391-100",
+        "date" : "03/10/2021",
+        "color": "BROWN/BRIGHT BLUE",
+        "access":0,
+        "shoeline": "Baseketball",
+        "brand": "Nike",
+        "detail": "Travis Scott ha collaborato con Nike SB per la release della sua prima ufficiale sneaker da skate - la Nike SB Dunk Low Travis Scott (Regular Box), ora disponibile su StockX. Questo design si attiene un'estetica simile alle Air Force 1 Low Travis Scott Cactus Jack, con una vasta gamma di materiali e stampe. A differenza delle precedenti release firmate Travis Scott, questo modello non era disponibile su SNKRS ma solo presso alcuni retailer di Nike SB."
+    }
+]

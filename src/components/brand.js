@@ -5,35 +5,34 @@ import mlb from './mlb.png'
 import vans from './vans.png'
 import nb from './nb.png'
 import {Link} from 'react-router-dom'
-
 const Brand = () => {
 
     return (
         <div className="brands"> 
-            <h1> Popular Brands</h1>
+            <h3> Popular Brands</h3>
             <div className="brand">
             <Link  to='/brand/Adidas' >
-                <div className="card">
+                <div className="card-adidas">
                     <img className="dasimg" src={das}></img>
                 </div>
             </Link>
             <Link to='/brand/Nike' >
-                <div className="card">
+                <div className="card-nike">
                     <img className="dasimg" src={nike}></img>
                 </div>
             </Link>
-            <Link to='/Vans'>
-                <div className="card">
+            <Link to='/brand/Vans'>
+                <div className="card-vans">
                     <img className="dasimg" src={vans}></img>
                 </div>
             </Link>
-            <Link to='/mlb' >
-                <div className="card">
+            <Link to='/brand/MLB' >
+                <div className="card-mlb">
                     <img className="dasimg" src={mlb}></img>
                 </div>
             </Link>
-            <Link to='/newbalance' >
-                <div className="card">
+            <Link to='/brand/New-Balance' >
+                <div className="card-nb">
                     <img className="dasimg" src={nb}></img>
                 </div>
             </Link>

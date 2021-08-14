@@ -1,14 +1,44 @@
 import {Button, Modal,Form} from 'react-bootstrap'
-import { useState } from 'react';
+import { useState,useEffect } from 'react';
 import {AiFillCloseCircle} from 'react-icons/ai'
-const Detail =({shoe})=>{
+import DataNike from '../data/data.json'
+import DataDas from '../data/dataDas.json'
+import DataVans from '../data/dataVans.json'
+import DataMLB from '../data/dataMlb.json'
+import DataNB from '../data/dataNB.json'
+import { useParams } from 'react-router-dom';
+import Related from './Related';
+import { BrowserRouter as Router, Route } from "react-router-dom";
+import Ads from './ads';
+const Detail =()=>{
     const Style={
         display: {
-           paddingLeft: "50px",
+           paddingLeft: "100px",
 
         },
-        h3:{
-            fontFamily: 'Roboto'
+        name: {
+            fontSize: "60px",
+            textAlign: "center"
+        },
+        image: {
+            display: "flex",
+            justifyContent: "center"
+        },
+        details: {
+            display: "flex",
+            justifyContent: "space-between"
+        },
+        tag:{
+            fontSize: "150%"
+        },
+        left:{
+            
+            paddingLeft: "5%",
+            width: "30%"
+        },
+        right:{
+            paddingLeft: "5%",
+            width:"70%"
         },
         btn:{
             backgroundColor: "#21759B",
@@ -23,23 +53,60 @@ const Detail =({shoe})=>{
         }
 
     }
+    const [shoes,setShoes]  = useState([]) 
     const [show, setShow] = useState(false);
-
+    const {shoe} = useParams()
+    console.log(shoe)
+    let Data = DataNike.concat(DataDas,DataVans,DataMLB,DataNB)
     const handleClose = () => setShow(false);
     const handleShow = () => setShow(true);
+    let obj = Data.find(elm => elm.name == shoe)
+    console.log(obj)
+    Data.map((shoe)=> {
+            if(shoe.shoeline == obj.shoeline)
+                shoes.push(shoe)
+        })
+    const url = window.location.href
+    console.log(url)
+    // switch(obj.brand)
+    //     {
+    //         case 'Nike':
+    //          {   setShoes(DataNike)
+    //             break}
+    //         case 'Adidas':
+    //          {   setShoes(DataDas)
+    //             break}
+    //         default:
+    //           break
+    //     }
+
+
     return(
-        <div style={Style.display}>
-            <img src={shoe.source} width="100%"></img>
-            <div>
-                <h3 style={Style.h3}> RETAIL PRICE : {shoe.price} $ </h3>
-                <h3 style={Style.h3}> COLORWAY: {shoe.color}  </h3>
-                <h3 style={Style.h3}> STYLE: {shoe.style} </h3>
-                <h3 style={Style.h3}> RELEASE DATE: {shoe.date} </h3>  
-                <button style={Style.btn} onClick = {handleShow} > Đặt mua </button>
+        <div >
+            <h1 style = {Style.name}> {obj.name}</h1>
+            <div style={Style.image}>
+                <img src={obj.source} width="80%"></img>
+            </div>
+            <div className="order">
+                <div className="order-tag">
+                    <h2>Order</h2>
+                </div>
+            </div>
+            <div style={Style.details}>
+                <div style={Style.left}>
+                    <p style={Style.tag}> RETAIL PRICE : {obj.price} $ </p>
+                    <p style={Style.tag}> COLORWAY : {obj.color}  </p>
+                    <p style={Style.tag}> STYLE : {obj.style} </p>
+                    <p style={Style.tag}> RELEASE DATE : {obj.date} </p>  
+                    <button style={Style.btn} onClick = {handleShow} > Đặt mua </button>
+                </div>
+                <div style={Style.right}>
+                    <p>{obj.detail}</p>
+                </div>              
             </div>
             <Modal show={show} onHide={handleClose}>
                 <Modal.Header>
-                    <Modal.Title>{shoe.name}</Modal.Title>
+                    <Modal.Title>{obj.name}</Modal.Title>
                     <AiFillCloseCircle size='30px' onClick={handleClose}></AiFillCloseCircle>
                 </Modal.Header>
                 <Modal.Body>
@@ -64,6 +131,7 @@ const Detail =({shoe})=>{
                 </Modal.Footer>
             </Modal>
         </div>
+
     )
     
 }
