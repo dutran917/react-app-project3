@@ -8,7 +8,9 @@ $success: #EF3B3A;
     margin-right: 20px;
   }
 .choose{
-  margin-left: 200px;
+  // margin-left: 200px;
+  display: flex;
+  justify-content: flex-end;
 }
 .mr-2{
     width: 400px;
