@@ -82,7 +82,7 @@ const Detail =()=>{
 
 
     return(
-        <div >
+        <div className="shoe-detail">
             <h1 style = {Style.name}> {obj.name}</h1>
             <div className="Cond-detail">
                 <h3>Condition: </h3>

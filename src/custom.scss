@@ -177,6 +177,9 @@ figcaption{
 }
 
 /* -----------product---------------- */
+.shoe-detail{
+  margin-top: 5%;
+}
 .name-brand{
   margin-bottom: 5%;
 }
@@ -188,11 +191,14 @@ figcaption{
   // color: white;
   border-radius: 5px;
 }
-.Cond-detail{
+.Cond-detail {
   margin-left: 5%;
   display: flex;
   // align-items: center;
   
+}
+.Cond-detail > h3 {
+  font-weight: 800;
 }
 .Cond{
   color: seagreen;
@@ -207,6 +213,9 @@ figcaption{
   display: flex;
   align-items: flex-start;
   padding-left: 1%;
+}
+.Authentic > h3 {
+  font-weight: 800;
 }
 .order{
   display: flex;
