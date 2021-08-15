@@ -103,7 +103,6 @@ const Body = () =>{
 
     }
 
-  
     useEffect(() => {
         changeBrand(brand)
         if(line != null)
@@ -122,7 +121,7 @@ const Body = () =>{
         }
     },[brand,line])
 
-    const [display,setDisplay] = useState(true)
+    const [display,setDisplay] = useState(false)
   
     // const clickonimg = (a)=> {
     // setDisplay(false)
@@ -142,14 +141,49 @@ const Body = () =>{
     // const goBack = () => {
       
     // }
+    function showAll(){
+        switch(brand)
+        {
+            case 'Nike':
+            {   
+                setShoes(shoesNike)
+                break
+            }
+            case 'Adidas':
+            {   
+                setShoes(shoesDas)
+                break
+            }
+            case 'Vans':
+            {
+                setShoes(shoesVans)
+                break
+            }
+            case 'MLB':
+            {
+                setShoes(shoesMLB)
+                break
+            }
+            case 'New-Balance':
+            {
+                setShoes(shoesNB)
+                break
+            }
+            default:
+              break
+        }
+        setline(null)
+        setDisplay(false)
+    }    
     return(
         <section style={Style.Section}>
-            {
-                display && <div className="left" style={Style.Left}>
-                <Form onChange = {(e)=>setline(e.target.value)}> 
-                    <h3>{brand}</h3>    
+            <div className="left" style={Style.Left}>
+                <Form > 
+                    <h3>{brand}</h3>
+                    <Form.Check type="radio" name='shoeline' label="All" defaultChecked onChange={()=>showAll()}/>
                     {lineofshoe.map((line)=>(
-                       <Form.Check type="radio" name='shoeline' label={line} value={line} />
+                       <Form.Check type="radio" name='shoeline' label={line} value={line} onChange = {(e)=>{setline(e.target.value) 
+                                                                                                            setDisplay(true)}  }/>
                     ))}
                 </Form>
                 <Form> 
@@ -162,9 +196,9 @@ const Body = () =>{
                     <Form.Check type="radio" name="price" label="$>1200"></Form.Check>    
                 </Form>
             </div>
-            }
+            
             <div className="right" style={Style.Right}>
-                <Shoes shoes ={shoes}  ></Shoes>
+                <Shoes shoes ={shoes} line={line} display={display} ></Shoes>
             </div>
         </section>     
     )

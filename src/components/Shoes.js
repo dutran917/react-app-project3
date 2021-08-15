@@ -1,9 +1,10 @@
 import Shoe from "./Shoe"
 import {FcShop} from 'react-icons/fc'
-const Shoes = ({shoes}) =>{
+import { AiFillCaretRight,AiTwotoneTags } from "react-icons/ai";
+const Shoes = ({shoes,line,display}) =>{
     const style = {
         tit:{
-            borderTop: "3px black solid",
+            // borderTop: "3px black solid",
             display: "flex"
         },
         h1:{
@@ -15,6 +16,9 @@ const Shoes = ({shoes}) =>{
             flexWrap: "wrap",
             justifyContent: "space-between",
             alignItems: "flex-end"
+        },
+        showBrand:{
+            display: "flex"
         }
     }
     return(
@@ -24,6 +28,14 @@ const Shoes = ({shoes}) =>{
                 <div style={{marginLeft: "10px"}}>
                     <FcShop size='40px'></FcShop>
                 </div>
+                {display && 
+                <div style = {style.showBrand}>
+                <AiFillCaretRight size='40px'></AiFillCaretRight>
+                <div className="shoe-line">
+                    <h3>{line}</h3>
+                    <AiTwotoneTags></AiTwotoneTags>
+                </div>
+                </div>}
             </div>
             <div style = {style.list}>
             {shoes.map((shoe)=>(
