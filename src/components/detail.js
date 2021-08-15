@@ -1,6 +1,6 @@
 import {Button, Modal,Form} from 'react-bootstrap'
 import { useState,useEffect } from 'react';
-import {AiFillCloseCircle} from 'react-icons/ai'
+import {AiFillCloseCircle,AiOutlineCheckCircle} from 'react-icons/ai'
 import DataNike from '../data/data.json'
 import DataDas from '../data/dataDas.json'
 import DataVans from '../data/dataVans.json'
@@ -32,13 +32,13 @@ const Detail =()=>{
             fontSize: "150%"
         },
         left:{
-            
             paddingLeft: "5%",
             width: "30%"
         },
         right:{
-            paddingLeft: "5%",
-            width:"70%"
+            // paddingLeft: "5%",
+            width:"60%",
+            paddingRight:"5%"
         },
         btn:{
             backgroundColor: "#21759B",
@@ -84,6 +84,16 @@ const Detail =()=>{
     return(
         <div >
             <h1 style = {Style.name}> {obj.name}</h1>
+            <div className="Cond-detail">
+                <h3>Condition: </h3>
+                <h3 className="Cond">New</h3>
+                <div className="Authentic">
+                        <h3>100% Authentic</h3>   
+                    <div className="check">
+                        <AiOutlineCheckCircle size="30px"></AiOutlineCheckCircle>
+                    </div>
+                </div>
+            </div>
             <div style={Style.image}>
                 <img src={obj.source} width="80%"></img>
             </div>

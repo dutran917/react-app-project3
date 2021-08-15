@@ -6,11 +6,11 @@ const Shoe = ({shoe}) => {
         <div className="item">
             <Link to={a} className="linkto">
                 <figure>
-                    <img  src={shoe.source} alt="shoe"/>
-                    <div>
-                        <p> {shoe.name} </p>
-                        <h3 className="price"> ${shoe.price} </h3>
+                    <img className="shoe-img" src={shoe.source} alt="shoe"/>
+                    <div className="shoe-name">
+                        <p> {shoe.name} </p>                       
                     </div>
+                    <h3 className="price"> ${shoe.price} </h3>
                 </figure>
             </Link>
         </div>

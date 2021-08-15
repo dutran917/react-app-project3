@@ -2,7 +2,7 @@ import React from 'react'
 import das from './das.png'
 import nike from './nike.png'
 import mlb from './mlb.png'
-import vans from './vans.png'
+import vans from './vans1.png'
 import nb from './nb.png'
 import {Link} from 'react-router-dom'
 const Brand = () => {
@@ -11,9 +11,9 @@ const Brand = () => {
         <div className="brands"> 
             <h3> Popular Brands</h3>
             <div className="brand">
-            <Link  to='/brand/Adidas' >
+            <Link  to='/brand/Adidas' className="name-brand">
                 <div className="card-adidas">
-                    <img className="dasimg" src={das}></img>
+                    <img className="dasimg" src={das}></img>    
                 </div>
             </Link>
             <Link to='/brand/Nike' >

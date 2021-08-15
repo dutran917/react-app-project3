@@ -18,7 +18,7 @@ $success: #EF3B3A;
 }
 
 div.item{
-  width: 25%;
+  width: 23%;
   // padding: 3px;
   // border: double;
 }
@@ -37,6 +37,13 @@ figcaption{
 }
 .price{
   padding-left: 5%;
+  height: 10%;
+}
+// .shoe-img{
+//   height: 80%;
+// }
+.shoe-name{
+  height: 50px;
 }
 .item .linkto {
   text-decoration: none;
@@ -107,7 +114,7 @@ figcaption{
   width: 200px;
   padding-left: 20px;
   padding-top: 20px;
-  margin-bottom: 100px;
+  // margin-bottom: 100px;
   background-image: url("adidasbg.png");
   height: 200px;
   box-shadow: 10px 10px 10px rgba(0,0,0,0.5);
@@ -118,7 +125,6 @@ figcaption{
   width: 200px;
   padding-left: 20px;
   padding-top: 20px;
-  margin-bottom: 100px;
   background-image: url("nikebg.png");
   height: 200px;
   box-shadow: 10px 10px 10px rgba(0,0,0,0.5);
@@ -129,7 +135,6 @@ figcaption{
   width: 200px;
   padding-left: 20px;
   padding-top: 20px;
-  margin-bottom: 100px;
   background-image: url("mlbbg.png");
   height: 200px;
   box-shadow: 10px 10px 10px rgba(0,0,0,0.5);
@@ -140,7 +145,6 @@ figcaption{
   width: 200px;
   padding-left: 20px;
   padding-top: 20px;
-  margin-bottom: 100px;
   background-image: url("vansbg.png");
   height: 200px;
   box-shadow: 10px 10px 10px rgba(0,0,0,0.5);
@@ -151,7 +155,6 @@ figcaption{
   width: 200px;
   padding-left: 20px;
   padding-top: 20px;
-  margin-bottom: 100px;
   background-image: url("nbbg.png");
   height: 200px;
   box-shadow: 10px 10px 10px rgba(0,0,0,0.5);
@@ -174,6 +177,9 @@ figcaption{
 }
 
 /* -----------product---------------- */
+.name-brand{
+  margin-bottom: 5%;
+}
 .shoe-line {
   display: flex;
   justify-content: space-between;
@@ -181,6 +187,26 @@ figcaption{
   // background-color: rgba(0,0,0,0.5);
   // color: white;
   border-radius: 5px;
+}
+.Cond-detail{
+  margin-left: 5%;
+  display: flex;
+  // align-items: center;
+  
+}
+.Cond{
+  color: seagreen;
+  padding-right: 1%;
+  padding-bottom: 0px;
+}
+.Authentic{
+  padding-bottom: 0px;
+  border-left: 2px solid black;
+  color: seagreen;
+  // margin-left: 1%;
+  display: flex;
+  align-items: flex-start;
+  padding-left: 1%;
 }
 .order{
   display: flex;

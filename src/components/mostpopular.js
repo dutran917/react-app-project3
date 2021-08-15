@@ -10,7 +10,7 @@ const Mostpopular = () => {
         }
     }
     return (
-        <div>
+        <div className="most-pop">
             <h3> Most Popular Sneakers </h3>
             <div style = {style.list}>
                 {shoes.map((shoe)=>(
