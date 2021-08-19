@@ -16,6 +16,18 @@ $success: #EF3B3A;
     width: 400px;
     margin-right: 10px;
 }
+.ads{
+  font-family: Georgia, 'Times New Roman', Times, serif;
+}
+.ads > h1 {
+  font-size: 60px;
+}
+.ads-details{
+  font-weight:1200;
+  color: black;
+  background-color: burlywood;
+  border-radius: 20px;
+}
 
 div.item{
   width: 23%;
@@ -174,11 +186,30 @@ figcaption{
 
 .brands{
   // background-color: cornsilk;
+  margin-top: 2%;
+  margin-left: 2%;
 }
-
+.brands > h3 {
+  font-weight: 900;
+}
+.most-pop{
+  margin-left: 2%;
+}
+.most-pop > h3 {
+  font-weight: 900;
+}
 /* -----------product---------------- */
+.des > h1 {
+  font-weight: 900;
+}
+.filter > h3 {
+  font-weight: 900;
+}
 .shoe-detail{
   margin-top: 5%;
+}
+.shoe-detail > h1{
+  font-weight: 900;
 }
 .name-brand{
   margin-bottom: 5%;
@@ -198,7 +229,7 @@ figcaption{
   
 }
 .Cond-detail > h3 {
-  font-weight: 800;
+  font-weight: 900;
 }
 .Cond{
   color: seagreen;

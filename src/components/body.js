@@ -14,13 +14,18 @@ import lineMLB from '../data/shoelineMlb.json'
 import lineNB from '../data/shoelineNB.json'
 import {useParams,useHistory} from 'react-router-dom'
 import {Form} from 'react-bootstrap'
+import {Carousel} from 'react-bootstrap'
+import { Link } from "react-router-dom";
+import bg from '../bg.png'
+import banner from '../data/banner.json'
+
 const Body = () =>{
     const Style ={
         Section:{
+            marginTop: "2%",
             display: "flex"
         },
         Left:{
-            paddingTop: "2%",
             paddingLeft: "5%",
             width: "20%"
         },
@@ -45,6 +50,10 @@ const Body = () =>{
         back:{
           position: "absolute",
           left: "50px"
+        },
+        img:{
+          width: "100%",
+          height: "400px"  
         }
     }
     // const [brand,setBrand] = useState("")
@@ -58,12 +67,13 @@ const Body = () =>{
     let shoesVans = DataVans
     let shoesMLB = DataMLB
     let shoesNB = DataNB
+    const [des,setDes] = useState(null)
     const [lineofshoe,setLoS] = useState(lineNike)
     // const [shoe,setShoe] = useState(null)
-    const [id,setId] = useState(-1)
-    const {shoe} = useParams()
     const {brand} = useParams()
     const [line, setline] = useState(null)
+    const [max,setMax] = useState(null)
+    const [min,setMin] = useState(null)
     function changeBrand(brand){
         switch(brand)
         {
@@ -71,30 +81,35 @@ const Body = () =>{
             {   
                 setShoes(shoesNike)
                 setLoS(lineNike)
+                setDes(banner.nike)
                 break
             }
             case 'Adidas':
             {   
                 setShoes(shoesDas)
                 setLoS(lineDas)
+                setDes(banner.adidas)
                 break
             }
             case 'Vans':
             {
                 setShoes(shoesVans)
                 setLoS(lineVans)
+                setDes(banner.vans)
                 break
             }
             case 'MLB':
             {
                 setShoes(shoesMLB)
                 setLoS(lineMLB)
+                setDes(banner.mlb)
                 break
             }
             case 'New-Balance':
             {
                 setShoes(shoesNB)
                 setLoS(lineNB)
+                setDes(banner.nb)
                 break
             }
             default:
@@ -105,42 +120,38 @@ const Body = () =>{
 
     useEffect(() => {
         changeBrand(brand)
-        if(line != null)
-        {
-            let clone 
+        let clone 
             if(brand=='Nike')
                 clone = shoesNike
             else if(brand =='Adidas')
                 clone = shoesDas
             else if(brand =='Vans')
                 clone = shoesVans
+               
+        let fil = clone.filter(shoe => shoe.shoeline === line)
+        if(line != null)
+        {                  
             console.log(brand)
-            let fil = clone.filter(shoe => shoe.shoeline === line)
+            
             console.log(fil)          
             setShoes(fil)
+            
         }
-    },[brand,line])
+        if(line==null&&min!=null)
+        {
+            setShoes(clone.filter(shoe => shoe.price <= max && shoe.price >=min))
+        }
+        else if(line != null && min != null )
+        {
+            setShoes(fil.filter(shoe => shoe.price <= max && shoe.price >=min))
+        }
+        
+
+    },[brand,line,max,min])
 
     const [display,setDisplay] = useState(false)
   
-    // const clickonimg = (a)=> {
-    // setDisplay(false)
-    // setId(a.id)
-    // setShoe(a)
-    // console.log(shoe)
-    // }
-
-    // useEffect(() => {
-   
-    // }, [line])
-    
  
-
-    const history = useHistory()
-
-    // const goBack = () => {
-      
-    // }
     function showAll(){
         switch(brand)
         {
@@ -174,33 +185,60 @@ const Body = () =>{
         }
         setline(null)
         setDisplay(false)
-    }    
+        
+    }  
+    
+  
     return(
-        <section style={Style.Section}>
+       <div>
+            <Carousel controls={false}>
+                <Carousel.Item>
+                    <img
+                    className="d-block w-100"
+                    src={bg}
+                    height='400px'
+                    />
+                    <Carousel.Caption>
+                        <div className="des">
+                            <h1>{des}</h1>
+                        </div>
+                    </Carousel.Caption>
+                </Carousel.Item> 
+            </Carousel>
+            <section style={Style.Section}>
             <div className="left" style={Style.Left}>
-                <Form > 
+                <Form className="filter"> 
                     <h3>{brand}</h3>
                     <Form.Check type="radio" name='shoeline' label="All" defaultChecked onChange={()=>showAll()}/>
                     {lineofshoe.map((line)=>(
                        <Form.Check type="radio" name='shoeline' label={line} value={line} onChange = {(e)=>{setline(e.target.value) 
                                                                                                             setDisplay(true)}  }/>
+                     
                     ))}
-                </Form>
-                <Form> 
                     <h3>Price </h3>
-                    <Form.Check type="radio" name="price" label="$50-100"></Form.Check>
-                    <Form.Check type="radio" name="price" label="$100-200"></Form.Check>   
-                    <Form.Check type="radio" name="price" label="$200-400"></Form.Check>
-                    <Form.Check type="radio" name="price" label="$400-800"></Form.Check>
-                    <Form.Check type="radio" name="price" label="$800-1200"></Form.Check>
-                    <Form.Check type="radio" name="price" label="$>1200"></Form.Check>    
+                    <Form.Check type="radio" name="price" label="All" defaultChecked onChange={()=>setMin(null)}></Form.Check>
+                    <Form.Check type="radio" name="price" label="$50-100" onChange={()=>{setMax(100) 
+                                                                                        setMin(50)}}></Form.Check>
+                    <Form.Check type="radio" name="price" label="$100-200" onChange={()=>{setMax(200) 
+                                                                                        setMin(100)}}></Form.Check>   
+                    <Form.Check type="radio" name="price" label="$200-400" onChange={()=>{setMax(400) 
+                                                                                        setMin(200)}}></Form.Check>
+                    <Form.Check type="radio" name="price" label="$400-800" onChange={()=>{setMax(800) 
+                                                                                        setMin(400)}}></Form.Check>
+                    <Form.Check type="radio" name="price" label="$800-1200" onChange={()=>{setMax(1200) 
+                                                                                        setMin(800)}}></Form.Check>
+                    <Form.Check type="radio" name="price" label="$>1200" onChange={()=>{setMax(5000) 
+                                                                                        setMin(1200)}}></Form.Check>   
+                    
                 </Form>
+                
             </div>
             
             <div className="right" style={Style.Right}>
                 <Shoes shoes ={shoes} line={line} display={display} ></Shoes>
             </div>
         </section>     
+       </div>
     )
 }
 

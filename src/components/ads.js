@@ -5,29 +5,32 @@ import qc2 from '../qc2.png'
 import {Carousel} from 'react-bootstrap'
 const Ads = () => {
     return (
-        <Carousel fade>
+        <Carousel fade controls={false}>
             <Carousel.Item interval={3000}>
                 <img
                 className="d-block w-100"
-                src={qc}
+                src={qc4}
                 alt="First slide"
                 height='400px'
                 />
-                <Carousel.Caption>
-                <h3>THE BEST SALE</h3>
-                <p>Nulla vitae elit libero, a pharetra augue mollis interdum.</p>
+                <Carousel.Caption className="caption">
+                    <div className="ads">
+                        <h1>Welcome !!</h1>
+                    </div>
+                    <div className="ads-details">
+                        <h2>Every sneaker you want is always available and authentic</h2>
+                    </div>
+                  
                 </Carousel.Caption>
             </Carousel.Item>
             <Carousel.Item interval={2000}>
                 <img
                 className="d-block w-100"
-                src={qc4}
+                src={qc}
                 alt="Second slide"
                 height='400px'
                 />
                 <Carousel.Caption>
-                <h3>POPULAR BRANDS</h3>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
                 </Carousel.Caption>
             </Carousel.Item>
             <Carousel.Item interval={2000}>
@@ -38,8 +41,9 @@ const Ads = () => {
                 height='400px'
                 />
                 <Carousel.Caption>
-                <h3>COLECTION</h3>
-                <p>Praesent commodo cursus magna, vel scelerisque nisl consectetur.</p>
+                <div className="ads-details">  
+                    
+                </div>
                 </Carousel.Caption>
             </Carousel.Item>
         </Carousel>
