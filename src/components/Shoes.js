@@ -9,7 +9,8 @@ const Shoes = ({shoes,line,display}) =>{
         },
         h1:{
             marginTop: "2px",
-            paddingLeft: "30px",      
+            paddingLeft: "30px", 
+            fontWeight: "900"     
         },
         list:{
             display: "flex",

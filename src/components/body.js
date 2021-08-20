@@ -127,6 +127,10 @@ const Body = () =>{
                 clone = shoesDas
             else if(brand =='Vans')
                 clone = shoesVans
+            else if(brand =='MLB')
+                clone = shoesMLB
+            else if(brand =='New-Balance')
+                clone = shoesNB
                
         let fil = clone.filter(shoe => shoe.shoeline === line)
         if(line != null)

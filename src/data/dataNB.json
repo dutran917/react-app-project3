@@ -1,7 +1,7 @@
 [
     {
         "id": 1,
-        "name": "New Balance Fresh Foam More Trail v1 Dark Blaze Mulberry",
+        "name": "New Balance Fresh Trail v1 Dark Blaze Mulberry",
         "source": "../item//nb/nb1.png",
         "price": "489",
         "style": "CVN0A4BVF5X51",
@@ -37,7 +37,7 @@
     },
     {
         "id": 4,
-        "name": "New Balance 247 Deconstructed Grey Dark Mulberry",
+        "name": "New Balance 247 Deconstructed Grey Dark",
         "source": "../item//nb/nb4.png",
         "price": "245",
         "style": "CVN0A4BVF5X51",

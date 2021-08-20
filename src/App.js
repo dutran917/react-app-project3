@@ -8,6 +8,7 @@ import { BrowserRouter as Router, Route } from "react-router-dom";
 import './custom.scss'
 import Detail from './components/detail';
 import Mostpopular from './components/mostpopular';
+import About from './components/about';
 function App() {
  
   return (
@@ -20,7 +21,7 @@ function App() {
         <Route path ='/product/:shoe' component={Detail}></Route>
         <Route path='/account/login' component ={Login}></Route>
         <Route path='/account/register' component ={Register}></Route>
-      
+        <Route path='/about' component={About}></Route>
       </Router>
 
   );
