@@ -9,6 +9,7 @@ import './custom.scss'
 import Detail from './components/detail';
 import Mostpopular from './components/mostpopular';
 import About from './components/about';
+import Help from './components/help';
 function App() {
  
   return (
@@ -22,6 +23,7 @@ function App() {
         <Route path='/account/login' component ={Login}></Route>
         <Route path='/account/register' component ={Register}></Route>
         <Route path='/about' component={About}></Route>
+        <Route path='/help' component={Help}></Route>
       </Router>
 
   );

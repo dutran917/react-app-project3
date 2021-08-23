@@ -119,6 +119,7 @@ const Body = () =>{
     }
 
     useEffect(() => {
+        window.scrollTo(0, 200)
         changeBrand(brand)
         let clone 
             if(brand=='Nike')
@@ -149,10 +150,10 @@ const Body = () =>{
         {
             setShoes(fil.filter(shoe => shoe.price <= max && shoe.price >=min))
         }
-        
+ 
 
     },[brand,line,max,min])
-
+    // window.scrollTo(0, 0)
     const [display,setDisplay] = useState(false)
   
  

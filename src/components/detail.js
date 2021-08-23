@@ -108,7 +108,7 @@ const Detail =()=>{
                     <p style={Style.tag}> COLORWAY : {obj.color}  </p>
                     <p style={Style.tag}> STYLE : {obj.style} </p>
                     <p style={Style.tag}> RELEASE DATE : {obj.date} </p>  
-                    <button style={Style.btn} onClick = {handleShow} > Đặt mua </button>
+                    <button style={Style.btn} onClick = {handleShow} >ORDER</button>
                 </div>
                 <div style={Style.right}>
                     <p>{obj.detail}</p>

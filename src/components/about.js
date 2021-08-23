@@ -73,9 +73,9 @@ const About = () => {
                     Cash on Delivery</p>
                 </div>
                 <div className="icon-sns" style={Style.flex}>
-                    <FaFacebook size="70"></FaFacebook>
-                    <GrInstagram size="70"></GrInstagram>
-                    <SiGmail size="70"></SiGmail>
+                    <FaFacebook className="icon-display" size="70"></FaFacebook>
+                    <GrInstagram className="icon-display" size="70"></GrInstagram>
+                    <SiGmail className="icon-display" size="70"></SiGmail>
                 </div>
                 <div style={Style.flex}>
                     <AiOutlineCopyrightCircle size="50"></AiOutlineCopyrightCircle>

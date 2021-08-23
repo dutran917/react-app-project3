@@ -1,4 +1,5 @@
 import { Link } from "react-router-dom";
+import { useEffect } from "react";
 const Shoe = ({shoe}) => {
     const a = "/product/" + shoe.name
     const Style = {
@@ -6,11 +7,19 @@ const Shoe = ({shoe}) => {
             fontWeight: "900" 
         }
     }
+    const scrollToTop = () => {
+        window.scrollTo({
+          top: 0,
+          behavior: "smooth"
+        });
+      };
+      
+   
     return(
         
         <div className="item">
             <Link to={a} className="linkto">
-                <figure>
+                <figure onClick={scrollToTop}>
                     <img className="shoe-img" src={shoe.source} alt="shoe"/>
                     <div className="shoe-name">
                         <p> {shoe.name} </p>                       
