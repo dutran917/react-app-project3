@@ -6,12 +6,15 @@ const Mostpopular = () => {
     const style = {
         list:{
             display:"flex",
+            justifyContent:"space-around",
             alignItems: "flex-end"
         }
     }
     return (
-        <div className="most-pop">
-            <h3> Most Popular Sneakers </h3>
+        <div className="content-main">
+            <div >
+                <h3 className="content-title"> <span className="span-name">Most Popular Sneakers</span> </h3>
+            </div>
             <div style = {style.list}>
                 {shoes.map((shoe)=>(
                     <Shoe shoe = {shoe} key = {shoe.id} ></Shoe>  

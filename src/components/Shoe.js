@@ -4,7 +4,7 @@ const Shoe = ({shoe}) => {
     const a = "/product/" + shoe.name
     const Style = {
         h3: {
-            fontWeight: "900" 
+     
         }
     }
     const scrollToTop = () => {
@@ -20,7 +20,7 @@ const Shoe = ({shoe}) => {
         <div className="item">
             <Link to={a} className="linkto">
                 <figure onClick={scrollToTop}>
-                    <img className="shoe-img" src={shoe.source} alt="shoe"/>
+                    <img  src={shoe.source} alt="shoe"/>
                     <div className="shoe-name">
                         <p> {shoe.name} </p>                       
                     </div>

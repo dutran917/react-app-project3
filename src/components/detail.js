@@ -26,10 +26,11 @@ const Detail =()=>{
         },
         details: {
             display: "flex",
-            justifyContent: "space-between"
+            justifyContent: "space-between",
+            paddingBottom: "3%"
         },
         tag:{
-            fontSize: "150%"
+            fontSize: "120%"
         },
         left:{
             paddingLeft: "5%",
@@ -49,7 +50,9 @@ const Detail =()=>{
             borderWidth: "1px",
             borderRadius: "3px 3px 3px 3px",
             fontSize: "16px",
-            padding: "10px 24px"
+            padding: "10px 24px",
+            color: "#FFF",
+
         }
 
     }
@@ -95,7 +98,7 @@ const Detail =()=>{
                 </div>
             </div>
             <div style={Style.image}>
-                <img src={obj.source} width="80%"></img>
+                <img src={obj.source} width="60%"></img>
             </div>
             <div className="order">
                 <div className="order-tag">
@@ -108,7 +111,7 @@ const Detail =()=>{
                     <p style={Style.tag}> COLORWAY : {obj.color}  </p>
                     <p style={Style.tag}> STYLE : {obj.style} </p>
                     <p style={Style.tag}> RELEASE DATE : {obj.date} </p>  
-                    <button style={Style.btn} onClick = {handleShow} >ORDER</button>
+                    <button className="btn-order" style={Style.btn} onClick = {handleShow} >ORDER</button>
                 </div>
                 <div style={Style.right}>
                     <p>{obj.detail}</p>

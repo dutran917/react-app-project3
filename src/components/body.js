@@ -32,8 +32,8 @@ const Body = () =>{
         Right:{
             width: "80%",
             display: "flex",
-            position: "relative"
-            
+            position: "relative",
+            paddingRight: "3%"
         },
         Brand:{
             marginTop: 0,
@@ -119,7 +119,6 @@ const Body = () =>{
     }
 
     useEffect(() => {
-        window.scrollTo(0, 200)
         changeBrand(brand)
         let clone 
             if(brand=='Nike')

@@ -14,8 +14,11 @@ const Header = () =>{
         // </div>
         <Navbar bg='dark' variant ='dark' sticky ='top' expand="lg">
             <Navbar.Brand >
-                <a className='logo' href='/'><img src={logo} width="60px" height='60px'></img></a>
-                SNEAKER HEAD
+                <a className='logo' href='/'>
+                        <img src={logo} width="60px" height='60px'></img> 
+                        <p>SNEAKER HEAD</p>
+                </a>
+                
             </Navbar.Brand>
             
             <Navbar.Toggle />

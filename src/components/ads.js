@@ -5,7 +5,7 @@ import qc2 from '../qc2.png'
 import {Carousel} from 'react-bootstrap'
 const Ads = () => {
     return (
-        <Carousel fade controls={false}>
+        <Carousel fade controls = {false}>
             <Carousel.Item interval={3000}>
                 <img
                 className="d-block w-100"
@@ -14,9 +14,9 @@ const Ads = () => {
                 height='400px'
                 />
                 <Carousel.Caption className="caption">
-                    <div className="ads">
-                        <h1>Welcome !!</h1>
-                    </div>
+                    {/* <div >
+                        <h1 className="ads">Welcome !!</h1>
+                    </div> */}
                     <div className="ads-details">
                         <h2>Every sneaker you want is always available and authentic</h2>
                     </div>
