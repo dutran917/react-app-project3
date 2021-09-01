@@ -11,6 +11,7 @@ import Mostpopular from './components/mostpopular';
 import About from './components/about';
 import Help from './components/help';
 import Stories from './components/stories';
+import Footer from './components/footer';
 function App() {
  
   return (
@@ -20,6 +21,7 @@ function App() {
         <Route exact path='/' component ={Brand}></Route>
         <Route exact path='/' component ={Mostpopular}></Route>
         <Route exact path='/' component ={Stories}></Route>
+        <Route exact path='/' component ={Footer}></Route>
         <Route path ='/brand/:brand' component={Body}></Route>
         <Route path ='/product/:shoe' component={Detail}></Route>
         <Route path='/account/login' component ={Login}></Route>

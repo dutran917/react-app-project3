@@ -58,7 +58,7 @@ const About = () => {
                 </div>
             </div>
             <Navbar className="nav-foot" bg='dark' variant ='dark' sticky ='bottom' expand="lg">
-            <div className="footer" style={Style.flex}>
+            <div className="footer" >
                 <div >
                     <p style={Style.h1}>SHIPPING</p>
                     <p>Giaohangtietkiem
@@ -78,8 +78,8 @@ const About = () => {
                     <SiGmail className="icon-display" size="70"></SiGmail>
                 </div>
                 <div style={Style.flex}>
-                    <AiOutlineCopyrightCircle size="50"></AiOutlineCopyrightCircle>
-                    <h3> 2021 Snearker Head </h3>
+                    <AiOutlineCopyrightCircle size="20"></AiOutlineCopyrightCircle>
+                    <h4> 2021 Snearker Head </h4>
                 </div>
             </div>
             </Navbar>

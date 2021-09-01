@@ -1,6 +1,7 @@
 $dark: rgba(0,0,0,0.8);
 $success: #EF3B3A;
 $danger: #198754;
+$light: rgb(31, 31, 31);
 @import "~bootstrap/scss/bootstrap.scss";
 @import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
 *{
@@ -384,6 +385,9 @@ figcaption{
   font-weight: 900;
 }
 .footer{
+  display: flex;
+  justify-items: flex-end;
+  // justify-content: space-between;
   margin-left: 20px;
   text-align: center;
   color: white;
@@ -451,4 +455,43 @@ figcaption{
 .news > figure > figcaption{
   text-align: center;
   font-size: 20px;
+}
+
+
+
+.footer-main{
+  display: flex;
+  width: 100%;
+  // height: 100%;
+  padding-left: 5%;
+  padding-top: 3%;
+}
+
+.footer-brand{
+  color: white;
+  text-align: center;
+  margin-right: 10%;
+
+}
+.footer-link{
+  color: white;
+  text-decoration: none;
+}
+.footer-link:hover{
+  color: white;
+}
+.footer-brand > p{
+  color: #818181;
+  cursor: pointer;
+}
+.footer-brand > p:hover{
+  color: #198754;
+}
+.footer-sns{
+  display: flex;
+  justify-content: space-around;
+  color: white;
+}
+.footer-sns-1{
+  color: white;
 }
